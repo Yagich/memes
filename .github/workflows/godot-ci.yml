@@ -8,15 +8,15 @@ on:
   workflow_dispatch:
 
 env:
-  EXPORT_NAME: godot-template
-  GODOT_VERSION: 3.4
+  EXPORT_NAME: memes3d
+  GODOT_VERSION: 3.4.2
 
 jobs:
   export-windows:
     name: Windows Export
     runs-on: ubuntu-latest
     container:
-      image: barichello/godot-ci:3.4
+      image: barichello/godot-ci:3.4.2
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -45,15 +45,15 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
           CHANNEL: windows
-          ITCH_GAME: godot-template
-          ITCH_USER: velopman
+          ITCH_GAME: memes3d
+          ITCH_USER: yagich
           PACKAGE: build/windows
 
   export-linux:
     name: Linux Export
     runs-on: ubuntu-latest
     container:
-      image: barichello/godot-ci:3.4
+      image: barichello/godot-ci:3.4.2
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -81,15 +81,15 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
           CHANNEL: linux
-          ITCH_GAME: godot-template
-          ITCH_USER: velopman
+          ITCH_GAME: memes3d
+          ITCH_USER: yagich
           PACKAGE: build/linux
 
   export-web:
     name: Web Export
     runs-on: ubuntu-latest
     container:
-      image: barichello/godot-ci:3.4
+      image: barichello/godot-ci:3.4.2
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -117,15 +117,15 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
           CHANNEL: web
-          ITCH_GAME: godot-template
-          ITCH_USER: velopman
+          ITCH_GAME: memes3d
+          ITCH_USER: yagich
           PACKAGE: build/web
 
   export-mac:
     name: Mac Export
     runs-on: ubuntu-latest
     container:
-      image: barichello/godot-ci:3.4
+      image: barichello/godot-ci:3.4.2
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -154,7 +154,7 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
           CHANNEL: mac
-          ITCH_GAME: godot-template
-          ITCH_USER: velopman
+          ITCH_GAME: memes3d
+          ITCH_USER: yagich
           PACKAGE: build/mac
           
